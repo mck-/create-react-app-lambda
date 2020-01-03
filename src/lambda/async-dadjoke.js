@@ -7,6 +7,16 @@ import serp from 'serp';
 import NGrams from 'word-ngrams';
 const x = Xray();
 
+var options = {
+  host : "google.com",
+  qs : {
+    q : "test",
+    filter : 0,
+    pws : 0
+  },
+  num : 1
+};
+
 export async function handler(event, context) {
   try {
     var corpus = [];
